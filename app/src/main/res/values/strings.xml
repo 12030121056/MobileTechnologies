@@ -12,5 +12,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_tempkelvin">tempkelvin</string>
     <string name="title_activity_temptype">temptype</string>
+    <string name="title_activity_volconvert">volconvert</string>
 
 </resources>

@@ -10,17 +10,19 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 
-public class distanceconverter extends ActionBarActivity {
+public class volconvert extends ActionBarActivity {
     private EditText text;
     private EditText disp;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_distanceconverter);
+        setContentView(R.layout.activity_volconvert);
+
+
         text = (EditText) findViewById(R.id.editText);
         disp = (EditText) findViewById(R.id.editText2) ;
     }
+
 
 
     // this method is called at button click because we assigned the name to the
@@ -28,8 +30,8 @@ public class distanceconverter extends ActionBarActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                RadioButton kmButton = (RadioButton) findViewById(R.id.radio1);
-                RadioButton mButton = (RadioButton) findViewById(R.id.radio2);
+                RadioButton lButton = (RadioButton) findViewById(R.id.radio1);
+                RadioButton gButton = (RadioButton) findViewById(R.id.radio2);
                 if (text.getText().length() == 0) {
                     Toast.makeText(this, "Please enter a valid number",
                             Toast.LENGTH_LONG).show();
@@ -37,28 +39,26 @@ public class distanceconverter extends ActionBarActivity {
                 }
 
                 float inputValue = Float.parseFloat(text.getText().toString());
-                if (kmButton.isChecked()) {
+                if (lButton.isChecked()) {
                     disp.setText(String
-                            .valueOf(ConverterUtil.convertMToKM(inputValue)));
-                    kmButton.setChecked(false);
-                    mButton.setChecked(true);
+                            .valueOf(ConverterUtil.convertGToL(inputValue)));
+                    lButton.setChecked(false);
+                    gButton.setChecked(true);
                 } else {
                     text.setText(String
-                            .valueOf(ConverterUtil.convertKMToM(inputValue)));
-                    mButton.setChecked(false);
-                    kmButton.setChecked(true);
+                            .valueOf(ConverterUtil.convertLToG(inputValue)));
+                    lButton.setChecked(false);
+                    gButton.setChecked(true);
                 }
                 break;
         }
     }
 
-}
 
-/*
-  @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_distanceconverter, menu);
+        getMenuInflater().inflate(R.menu.menu_volconvert, menu);
         return true;
     }
 
@@ -76,4 +76,4 @@ public class distanceconverter extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-}*/
+}

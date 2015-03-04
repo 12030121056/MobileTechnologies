@@ -45,7 +45,11 @@ public class volconvert extends ActionBarActivity {
                     lButton.setChecked(false);
                     gButton.setChecked(true);
                 } else {
+<<<<<<< HEAD
                     disp.setText(String
+=======
+                    text.setText(String
+>>>>>>> 78abdb488bf6d259428716a417fb2833d663e752
                             .valueOf(ConverterUtil.convertLToG(inputValue)));
                     lButton.setChecked(false);
                     gButton.setChecked(true);

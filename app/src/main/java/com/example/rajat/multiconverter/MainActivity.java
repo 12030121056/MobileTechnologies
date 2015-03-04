@@ -45,7 +45,11 @@ public class MainActivity extends ActionBarActivity {
         });
 
         Button v = (Button) findViewById(R.id.button4);
+<<<<<<< HEAD
         v.setOnClickListener(new View.OnClickListener() {
+=======
+        w.setOnClickListener(new View.OnClickListener() {
+>>>>>>> 78abdb488bf6d259428716a417fb2833d663e752
             @Override
             public void onClick(View v) {
                 Intent j =new Intent(getApplicationContext(),volconvert.class);

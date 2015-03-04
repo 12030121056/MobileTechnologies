@@ -42,6 +42,10 @@
             android:name=".temptype"
             android:label="@string/title_activity_temptype" >
         </activity>
+        <activity
+            android:name=".volconvert"
+            android:label="@string/title_activity_volconvert" >
+        </activity>
     </application>
 
 </manifest>

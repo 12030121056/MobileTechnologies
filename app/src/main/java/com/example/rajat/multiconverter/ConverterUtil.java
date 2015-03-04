@@ -34,4 +34,13 @@ public class ConverterUtil {
     public static double convertKToC(float k) {
         return (k - 273.15);
     }
+    public static double convertGToL(float g) {
+        return ((g )* 3.785);
+    }
+
+    // converts to liter
+    public static double convertLToG(float l) {
+        return ((l)/3.785 );
+    }
+
 }
